@@ -6,8 +6,12 @@ class MainMap extends Component {
     render() {
         return (
             <div>
-                <Map google={this.props.google} zoom={14}>
-
+                <Map 
+                google={this.props.google} zoom={14}
+                initialCenter={{
+                    lat: 33.717472,
+                    lng: -117.831146
+                }}>
                     <Marker 
                     name={'Steelhead Coffee'}
                     position={{ lat: 33.818908, lng: -118.187207}}
@@ -16,7 +20,6 @@ class MainMap extends Component {
                     name={'Bad Coffee'}
                     position={{ lat: 33.675577, lng: -117.911753}}
                     />
-
                 </Map>
             </div>
         );
